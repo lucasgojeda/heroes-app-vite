@@ -4,7 +4,11 @@ import 'animate.css';
 import { HeroCard } from './HeroCard';
 import { getHeroesByPublisher } from '../../selectors/getHeroesByPublisher';
 
-
+/**
+ * Este componente es el encargado de listar los heroes en base a la categoria (publisher).
+ * @module HeroList
+ * @property {publisher} - Es la categoria (Marvel Comics, Dc Comics).
+ */
 export const HeroList = ({ publisher }) => {
 
     const heroes = useMemo( () => getHeroesByPublisher(publisher), [publisher] );

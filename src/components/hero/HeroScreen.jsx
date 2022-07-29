@@ -6,10 +6,21 @@ import { getHeroById } from '../../selectors/getHeroeById';
 import { heroImages } from '../../data/heroesImages';
 
 
+/**
+ * Esta vista se encarga de mostrar individualmente cada héroe 
+ * en su propia card.
+ * @module HeroScreen
+ */
 export const HeroScreen = () => {
     
+    /**
+     * Se extrae el id del héroe desde los parametros.
+     */
     const { id } = useParams();
 
+    /**
+     * Obtenemos los heroes que logren hacer match con el "id".
+     */
     const hero = useMemo( () => getHeroById(id), [id] );
 
     const { 
@@ -24,6 +35,10 @@ export const HeroScreen = () => {
         return <Navigate to='/' />
     };
 
+    /**
+     * En base al "id" del héroes obtenemos el url de la imagen 
+     * que corresponda.
+     */
     const imgPath = heroImages.filter(
         e => (e.name === `${id}.jpg`) && e.url
     );

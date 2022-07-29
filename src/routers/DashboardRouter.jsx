@@ -8,6 +8,12 @@ import { SearchScreen } from '../components/search/SearchScreen';
 import { HeroScreen } from "../components/hero/HeroScreen";
 
 
+/**
+ * Este componente conecta las rutas con los componentes que hacen a la 
+ * escencia de la aplicación, es decir aquellos que muestran los datos y 
+ * las imagenes de los heroes tanto de "marvel" como de "dc".
+ * @module DashboardRouter
+ */
 export const DashboardRouter = () => {
     return (
 

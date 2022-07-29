@@ -101,7 +101,14 @@ const marvelWolverine = {
 };
 
 
-
+/**
+ * El siguiente Array contiene los url de cada héroe.
+ * @type {Array<Object>}
+ * @example {
+ *      url: "https://res.cloudinary.com/heroe",
+ *      name: (corresponde a la propiedad "id" en la data de "heroes.js")
+ * }
+ */
 export const heroImages = [
     dcArrow,
     dcBatman,

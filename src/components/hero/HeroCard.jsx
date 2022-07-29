@@ -5,6 +5,16 @@ import 'animate.css';
 import { heroImages } from '../../data/heroesImages';
 
 
+/**
+ * Este componente es la "card" encargada de mostrar individualmente cada héroe.
+ * @module HeroCard
+ * @property {id} - Id del héroe.
+ * @property {superhero} - Nombre del héroe.
+ * @property {publisher} - Categoria del héroe.
+ * @property {alter_ego} - Alter ego del héroe.
+ * @property {first_appearance} - First appearance del héroe.
+ * @property {characters} - Characters del héroe.
+ */
 export const HeroCard = ({
     id,
     superhero,
@@ -14,6 +24,9 @@ export const HeroCard = ({
     characters
 }) => {
 
+    /**
+     * Obtenemos el url de la imagen correspondiente al héroe mediante su "id".
+     */
     const imgPath = heroImages.filter(
         e => (e.name === `${id}.jpg`) && e.url
     );

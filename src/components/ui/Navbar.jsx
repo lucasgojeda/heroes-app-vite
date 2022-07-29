@@ -4,6 +4,12 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../auth/authContext';
 import { types } from '../../types/types';
 
+
+/**
+ * Este componente sirve para que el usuario pueda navegar entre las diferentes 
+ * rutas con las que cuenta la aplicación.
+ * @module Navbar
+ */
 export const Navbar = () => {
 
     const {user, dispatch} = useContext(AuthContext);

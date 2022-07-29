@@ -6,13 +6,16 @@ import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
 
+/**
+ * Este componente maneja las rutas "/login" y "/*", en este componente
+ * se encuentran colocados los componentes LoginScreen y DashboardRouter.
+ * @module AppRouter
+ */
 export const AppRouter = () => {
     return (
 
         <BrowserRouter>
             <Routes>
-
-                {/* <Route path="/login" element={<LoginScreen />} /> */}
 
                 <Route path="/login" element={
                     <PublicRoute>
@@ -26,7 +29,6 @@ export const AppRouter = () => {
                     </PrivateRoute>
                 } />
 
-                {/* <Route path="/*" element={<DashboardRouter />} /> */}
             </Routes>
         </BrowserRouter>
 

@@ -1,3 +1,16 @@
+/**
+ * El siguiente objeto contiene toda la información acerca de los héroes
+ * con excepción de las url de las imagenes.
+ * @type {Object}
+ * @example {
+        'id': 'dc-batman',
+        'superhero':'Batman', 
+        'publisher':'DC Comics', 
+        'alter_ego':'Bruce Wayne',
+        'first_appearance':'Detective Comics #27',
+        'characters':'Bruce Wayne'
+    }
+ */
 export const heroes = [
     {
         'id': 'dc-batman',
