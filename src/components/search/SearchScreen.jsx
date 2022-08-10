@@ -24,28 +24,28 @@ export const SearchScreen = () => {
      * directamente realizar la busqueda del heroes usando dicho string,
      * y si se requiere buscar un heroe diferente cambiamos el path.
      */
-    const {q = ''} = queryString.parse(location.search);
+    const { q = '' } = queryString.parse(location.search);
 
-    
 
-    const [ { searchText }, handleInputChange, reset ] = useForm( {
+
+    const [{ searchText }, handleInputChange, reset] = useForm({
         searchText: q
-    } );
+    });
 
     /**
      * Obtenemos los heroes que logren hacer match con el "name" del héroe.
      */
-    const heroesFiltered =  useMemo( () => (getHeroesByName(q)), [q]);
+    const heroesFiltered = useMemo(() => (getHeroesByName(q)), [q]);
 
     const handleSearch = (e) => {
         e.preventDefault();
 
-        navigate(`?q=${ searchText }`)
+        navigate(`?q=${searchText}`)
 
-        
+
     }
 
-    return(
+    return (
         <>
             <h1> Búsquedas </h1>
             <hr />
@@ -56,16 +56,17 @@ export const SearchScreen = () => {
                     <hr />
 
                     <form
-                        onSubmit={ handleSearch }
+                        name='form'
+                        onSubmit={handleSearch}
                     >
-                        <input 
+                        <input
                             onChange={handleInputChange}
                             type='text'
                             placeholder='Buscar un heroe'
                             className='form-control'
                             name='searchText'
                             autoComplete='off'
-                            value={ searchText }
+                            value={searchText}
                         />
 
                         <button
@@ -80,24 +81,34 @@ export const SearchScreen = () => {
                     <h4>Resultados</h4>
                     <hr />
 
-                    {
+                    {/* {
                         (q === '')
                             ? <div className='alert alert-info'> Buscar un héroe </div>
-                            : ( heroesFiltered.length === 0 ) && <div className='alert alert-danger'> No hay Resultados de '{q}' </div>
-                    }
+                            : (heroesFiltered.length === 0) && <div aria-label="alert-danger" className='alert alert-danger'> No hay Resultados de '{q}' </div>
+                    } */}
+
+                    <div className='alert alert-info'
+                        style={{ display: (q === '') ? '' : 'none' }}>
+                        Buscar un héroe
+                    </div>
+
+                    <div aria-label="alert-danger" className='alert alert-danger'
+                        style={{ display: (heroesFiltered.length === 0 && q !== '') ? '' : 'none' }}>
+                        No hay Resultados de '{q}'
+                    </div>
 
                     {
                         heroesFiltered.map(hero => (
-                            <HeroCard 
+                            <HeroCard
                                 key={hero.id}
-                                { ...hero }
+                                {...hero}
                             />
                         ))
                     }
                 </div>
             </div>
 
-            
+
         </>
     );
 };

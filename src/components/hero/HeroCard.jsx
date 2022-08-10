@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'animate.css';
 
 import { heroImages } from '../../data/heroesImages';
 
+import 'animate.css';
 
 /**
  * Este componente es la "card" encargada de mostrar individualmente cada héroe.
