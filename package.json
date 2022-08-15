@@ -31,7 +31,6 @@
     "babel-jest": "^28.1.0",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
-    "jest-transform-stub": "^2.0.0",
     "vite": "^3.0.0"
   }
 }
