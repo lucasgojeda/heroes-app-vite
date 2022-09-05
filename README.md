@@ -19,4 +19,4 @@ $ npm run dev
 
 ## Documentación 🖇️
 
-Por favor dirijase a la [documentación](https://lukitasojeda.github.io/heroes-app-vite/) para obetener detalles acerca del funcionamiento del código.
+Por favor dirijase a la [documentación](https://lucasgojeda.github.io/heroes-app-vite/) para obetener detalles acerca del funcionamiento del código.
