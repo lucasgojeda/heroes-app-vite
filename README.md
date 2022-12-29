@@ -1,22 +1,21 @@
 # Heroes App
 
-_Aplicación de heroes Dc comics y Marvel Comics_
+_Application of heroes Dc comics and Marvel Comics_
 
-## Requisitos y tutorial 🚀
+## Requirements and tutorial 🚀
 
-Para hacer funcionar este proyecto se requiere como primero tener instalado
-**node js**
+To make this project work it is required as first to have installed **node js**
 
-Luego se requiere introducir el siguiente comando en la consola:
+Then it is required to enter the following command in the console:
 ```
 $ npm i
 ```
 
-Listo, la aplicación ya está lista para ser iniciada con el siguiente comando:
+Done, the application is ready to be started with the following command:
 ```
 $ npm run dev
 ```
 
-## Documentación 🖇️
+## Documentation 🖇️
 
-Por favor dirijase a la [documentación](https://lucasgojeda.github.io/heroes-app-vite/) para obetener detalles acerca del funcionamiento del código.
+Please refer to the [documentation](https://lucasgojeda.github.io/heroes-app-vite/) for details on how the code works.
