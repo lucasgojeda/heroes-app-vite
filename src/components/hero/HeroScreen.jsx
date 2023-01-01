@@ -75,7 +75,7 @@ export const HeroScreen = () => {
                     className='btn btn-outline-info'
                     onClick={handleReturn}
                 >
-                    Regresar
+                    Back
                 </button>
             </div>
         </div>

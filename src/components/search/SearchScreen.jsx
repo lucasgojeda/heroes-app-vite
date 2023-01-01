@@ -47,12 +47,12 @@ export const SearchScreen = () => {
 
     return (
         <>
-            <h1> Búsquedas </h1>
+            <h1> Searches </h1>
             <hr />
 
             <div className='row'>
                 <div className='col-5'>
-                    <h4>Buscar</h4>
+                    <h4>Search</h4>
                     <hr />
 
                     <form
@@ -73,12 +73,12 @@ export const SearchScreen = () => {
                             type='submit'
                             className='btn btn-outline-primary mt-1'
                         >
-                            Buscar...
+                            Search...
                         </button>
                     </form>
                 </div>
                 <div className='col-7'>
-                    <h4>Resultados</h4>
+                    <h4>Results</h4>
                     <hr />
 
                     {/* {
@@ -89,12 +89,12 @@ export const SearchScreen = () => {
 
                     <div className='alert alert-info'
                         style={{ display: (q === '') ? '' : 'none' }}>
-                        Buscar un héroe
+                        Find a hero
                     </div>
 
                     <div aria-label="alert-danger" className='alert alert-danger'
                         style={{ display: (heroesFiltered.length === 0 && q !== '') ? '' : 'none' }}>
-                        No hay Resultados de '{q}'
+                        No results for '{q}'
                     </div>
 
                     {
